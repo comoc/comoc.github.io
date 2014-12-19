@@ -6,9 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Tororo Chan : tororochan">
 
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png" />
+
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Tororo Chan</title>
+	<style>
+		#cover {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+	$(function(){
+		var wid = $(window).width();
+		if( wid <= 1080 ){
+			$('#cover').each(function(){
+				$(this).attr("src",$(this).attr("src").replace('_L', '_S'));
+			});
+		}
+	});
+	</script>
   </head>
 
   <body>
@@ -17,7 +46,7 @@
     <div id="header_wrap" class="outer">
         <header class="inner">
           <h1 id="project_title">Tororo Chan</h1>
-          <h2 id="project_tagline">tororochan</h2>
+          <h2 id="project_tagline">Welcome to Tororo Chan page</h2>
 
         </header>
     </div>
@@ -25,8 +54,8 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-tororo-chan-page" class="anchor" href="#welcome-to-tororo-chan-page"><span class="octicon octicon-link"></span></a>Welcome to Tororo Chan Page.</h3>
+        <!-- <h3><a name="welcome-to-tororo-chan-page" class="anchor" href="#welcome-to-tororo-chan-page"><span class="octicon octicon-link"></span></a>Welcome to Tororo Chan Page.</h3> -->
+		<img src="images/tororo_top_L.png" id="cover"></img>
       </section>
     </div>
 
